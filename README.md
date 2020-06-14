@@ -22,3 +22,13 @@ Web application that allows employees to submit feedback to fellow employees.
 ### Diagrams
 
 ![Database design](https://user-images.githubusercontent.com/63290143/84590855-ec2c7f80-ae74-11ea-9f11-0616f76611f2.png)
+
+
+### Run scripts
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install wheel
+pip install -r requirements.txt
+```
