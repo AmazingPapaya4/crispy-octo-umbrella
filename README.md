@@ -29,6 +29,15 @@ Web application that allows employees to submit feedback to fellow employees.
 ```
 python3 -m venv venv
 source venv/bin/activate
-pip install wheel
 pip install -r requirements.txt
+
+// Start React
+cd application/frontend
+npm install
+npm start
+
+// Start Django backend
+cd application
+./manage.py migrate
+./manage.py runserver
 ```
