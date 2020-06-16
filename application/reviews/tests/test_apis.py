@@ -11,7 +11,9 @@ from reviews.serializers import ReviewSerializer
 client = APIClient()
 
 class ReviewsApiTest(TestCase):
-    """ Test module for reviews API """
+    """ 
+    Test module for reviews API
+    """
 
     def setUp(self):
         user = CustomUser.objects.create(
