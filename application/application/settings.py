@@ -125,8 +125,8 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'users.CustomUser' # custom user model
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'webapp'
+LOGOUT_REDIRECT_URL = 'login'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
