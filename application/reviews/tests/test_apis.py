@@ -1,11 +1,10 @@
-import json
 from rest_framework import status
 from rest_framework.test import APIClient
 from django.test import TestCase
 from django.urls import reverse
 from users.models import CustomUser
-from reviews.models import Review, Feedback
-from reviews.serializers import ReviewSerializer, FeedbackSerializer
+from reviews.models import Review
+from reviews.serializers import ReviewSerializer
 
 
 # initialize the APIClient app
