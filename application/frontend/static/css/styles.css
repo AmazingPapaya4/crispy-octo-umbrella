@@ -1,0 +1,72 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.button__primary {
+    font-size: 0.85em;
+    background: #6872ff;
+    color: white;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 3px;
+}
+
+.button__primary:hover {
+    background: #3b44bd;
+    cursor: pointer;
+}
+
+/* Login and signup Page */
+
+.static__container { 
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #fdfdfd;
+    display: flex;
+    align-items: center;
+}
+
+.signup {
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.login__title {
+    margin: 0;
+}
+
+.login__signup {
+    font-size: 0.85em;
+}
+
+.helptext, .signup ul {
+    font-size:0.7em;
+}
+
+.signup ul {
+    padding: 0;
+    list-style: none;
+}
+
+.signup label {
+    font-size: 0.8em;
+}
+
+.signup input {
+    width: 100%;
+    font-size: 0.85em;
+    padding: 8px;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid black;
+}
