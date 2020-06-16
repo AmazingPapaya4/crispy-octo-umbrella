@@ -2,8 +2,8 @@ from rest_framework import serializers
 from users.models import CustomUser
 
 class CustomUserSerializer(serializers.ModelSerializer):
-    feedbacks = serializers.StringRelatedField(many=True)
-    reviews = serializers.StringRelatedField(many=True)
+    feedbacks = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    reviews = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = CustomUser
