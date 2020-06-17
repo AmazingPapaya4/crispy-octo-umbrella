@@ -16,5 +16,11 @@
 </div>
 </body>
 {% load static %}
+<script>
+    window.userData = {
+        id: '{{ request.user.id }}',
+        username: '{{ request.user.username }}',
+    }
+</script>
 <script src="{% static 'index.js' %}"></script>
 </html>
