@@ -23,7 +23,7 @@ Web application that allows employees to submit feedback to fellow employees.
 - React codebase resides within the Django backend.
 - Session authentication.
 - SQLite is used in this example.
-- Some tests (backend) are written but not 100% coverage.
+- Some tests (backend) but not 100% coverage.
 
 ### Diagrams
 
@@ -47,9 +47,10 @@ Create a superuser
 ./manage.py createsuperuser
 ```
 
-Note: Set at least 1 user as admin in `http://localhost:8000/adminusers/customuser/`
+Note: Set one user as admin in `http://localhost:8000/adminusers/customuser/`
 
 Set up React (for development). Parcel is used to bundle scripts.
+Latest production build is in repo.
 ```
 cd application/frontend
 npm install
