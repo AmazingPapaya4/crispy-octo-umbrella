@@ -1,12 +1,15 @@
 from django.contrib import admin
-from django.urls import path, include
-from django.views.generic.base import TemplateView
+from django.urls import path, include, re_path
+from users.views import SignUpView
+
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('admin/', admin.site.urls),
-    path('', include('users.urls')),
-    path('auth/', include('django.contrib.auth.urls')),
-    path('', include('frontend.urls')),
-    path('api/v1/', include('reviews.urls')),
+    re_path(r'^signup', SignUpView.as_view(), name='signup'),
+    re_path(r'^admin', admin.site.urls),
+    re_path(r'^accounts/', include('django.contrib.auth.urls')),
+    re_path(r'^api/', include('users.urls')),
+    re_path(r'^api/', include('reviews.urls')),
+    re_path(r'^', include('frontend.urls')),
 ]
+
+handler404 = 'frontend.views.redirect_to_app'

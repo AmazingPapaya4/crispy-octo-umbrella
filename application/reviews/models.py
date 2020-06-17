@@ -17,6 +17,18 @@ class Review(models.Model):
     class Meta:
         ordering = ['created_at']
 
+    def get_feedbacks(self):
+        feedbacks = self.feedbacks.all()
+        res = []
+        for feedback in feedbacks:
+            temp = {}
+            temp['id'] = feedback.id
+            temp['assignee_id'] = feedback.assignee.id
+            temp['assignee_username'] = feedback.assignee.username
+            temp['message'] = feedback.message
+            res.append(temp)
+        return res
+
 
 class Feedback(models.Model):
     """
@@ -43,3 +55,24 @@ class Feedback(models.Model):
 
     class Meta:
         ordering = ['created_at']
+
+    def get_reviewing(self):
+        """
+        Returns dict of reviewed employee's full name and username
+        """
+        response = {}
+        # better to have methods to do this
+        response['full_name'] = self.review.employee.full_name
+        response['username'] = self.review.employee.username
+        return response
+
+    def get_assignee(self):
+        """
+        Returns dict of assignee's id, full name and username'
+        """
+        response = {}
+        # better to have methods to do this
+        response['id'] = self.assignee.id
+        response['username'] = self.assignee.username
+        response['full_name'] = self.assignee.full_name
+        return response
