@@ -1,0 +1,9 @@
+[Unit]
+Description=Application Service
+
+[Service]
+User=tarokawada
+Group=tarokawada
+WorkingDirectory=/home/tarokawada/Documents/crispy-octo-umbrella/application/
+EnvironmentFile=/home/tarokawada/Documents/crispy-octo-umbrella/etc/application.env
+ExecStart=/home/tarokawada/Documents/crispy-octo-umbrella/venv/bin/gunicorn application.wsgi:app
