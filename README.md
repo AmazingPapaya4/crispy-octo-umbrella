@@ -26,18 +26,32 @@ Web application that allows employees to submit feedback to fellow employees.
 
 ### Run scripts
 
+Set up backend
 ```
+cd project_directory
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+cd application
+./manage.py migrate
+```
 
-// Start React
+Create a superuser
+```
+./manage.py createsuperuser
+```
+
+Note: Set at least 1 user as admin in `http://localhost:8000/adminusers/customuser/`
+
+Set up React (for development). Parcel is used to bundle scripts.
+```
 cd application/frontend
 npm install
 npm start
-
-// Start Django backend
-cd application
-./manage.py migrate
-./manage.py runserver
 ```
+
+Start application
+```
+./manage.py runserver --insecure
+```
+Note: insecure flag is used to route 404 to react during development. Not for production
