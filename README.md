@@ -1,5 +1,9 @@
 # Paypay's Fullstack Challenge
 
+- Demo: http://test.tarokawada.com
+- User: tarokawada
+- password: password
+
 ### Brief description
 
 Web application that allows employees to submit feedback to fellow employees.
