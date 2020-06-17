@@ -14,10 +14,16 @@ Web application that allows employees to submit feedback to fellow employees.
   - List of performance reviews requiring feedback
   - Submit feedback
   
-### Assumptions and omissions
+### Notes
 
-- Application is made for one company and their employees.
+- Assuming application is made for one company and their employees.
 - Any form of notification such as emailing users is left out at a cost of user experience.
+- Backend developed in Django.
+- Frontend developed in React and bundled with Parcel.
+- React codebase resides within the Django backend.
+- Session authentication.
+- SQLite is used in this example.
+- Some tests (backend) are written but not 100% coverage.
 
 ### Diagrams
 
