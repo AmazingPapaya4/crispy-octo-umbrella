@@ -1,4 +1,4 @@
-# Paypay's Fullstack Challenge (Backend)
+# Paypay's Fullstack Challenge
 
 ### Brief description
 
